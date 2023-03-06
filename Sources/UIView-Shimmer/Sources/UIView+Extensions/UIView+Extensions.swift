@@ -26,7 +26,7 @@ extension UIView {
 
     func getFrame() -> CGRect {
         if let label = self as? UILabel {
-            let width: CGFloat = intrinsicContentSize.width
+            let width: CGFloat = intrinsicContentSize.width > bounds.width ? bounds.width : intrinsicContentSize.width
             var horizontalX: CGFloat!
             switch label.textAlignment {
             case .center:
